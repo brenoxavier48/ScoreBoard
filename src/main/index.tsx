@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -9,6 +7,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import ButtonUI from '../components/UI/Button'
 
 
 
@@ -19,6 +18,8 @@ const App = (props: any) => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.scrollView}>
         <Text style={styles.body}> Hello world </Text>
+        <ButtonUI handlePress={() => {}} title="title"></ButtonUI>
+        <ButtonUI handlePress={() => {}} title="+" height={25} width="07%" borderRadius={15}></ButtonUI>
       </SafeAreaView>
     </>
   );
