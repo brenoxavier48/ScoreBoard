@@ -11,22 +11,23 @@ type Props = {
   height?: number,
   accessibilityLabel?: string,
   borderRadius?: number,
+  children?: any
 }
 
 const ButtonUI = ({ handlePress, title, ...props }: Props) => {
-  const { ui_buttom, ui__buttom__tittle } = styles
-  const { width, height, borderRadius, accessibilityLabel } = props
+  const { ui__buttom, ui__buttom__tittle } = styles
+  const { width, height, borderRadius, accessibilityLabel, children } = props
 
   return (
     <>
       <TouchableOpacity 
         onPress={handlePress} 
         style={
-          [ ui_buttom, 
+          [ ui__buttom, 
             {
-              width: width || ui_buttom.width,
-              height: height || ui_buttom.height,
-              borderRadius: borderRadius || ui_buttom.borderRadius
+              width: width || ui__buttom.width,
+              height: height || ui__buttom.height,
+              borderRadius: borderRadius || ui__buttom.borderRadius
             }
           ]
         }
@@ -36,7 +37,7 @@ const ButtonUI = ({ handlePress, title, ...props }: Props) => {
           accessibilityRole="button"
           style={ui__buttom__tittle}
         >
-          {title}
+          {title || children} 
         </Text>
       </TouchableOpacity>
     </>
