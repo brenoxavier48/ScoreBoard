@@ -7,7 +7,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-import ButtonUI from '../components/UI/Button'
+import InputUI from '../components/UI/Input'
 
 
 
@@ -18,10 +18,7 @@ const App = (props: any) => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.scrollView}>
         <Text style={styles.body}> Hello world </Text>
-        <ButtonUI handlePress={() => {}} title="">
-          <Text>Hello</Text>
-        </ButtonUI>
-        <ButtonUI handlePress={() => {}} title="+" height={25} width="07%" borderRadius={15}></ButtonUI>
+        <InputUI></InputUI>
       </SafeAreaView>
     </>
   );
