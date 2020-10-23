@@ -6,7 +6,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --verbose",
     "lint": "eslint ."
   },
   "dependencies": {
@@ -17,6 +17,7 @@
     "@babel/core": "7.12.3",
     "@babel/runtime": "7.12.1",
     "@react-native-community/eslint-config": "1.1.0",
+    "@testing-library/react-native": "^7.1.0",
     "@types/jest": "^26.0.15",
     "@types/react": "^16.9.53",
     "@types/react-native": "^0.63.27",

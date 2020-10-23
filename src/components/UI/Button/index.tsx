@@ -14,14 +14,20 @@ type Props = {
   children?: any
 }
 
-const ButtonUI = ({ handlePress, title, ...props }: Props) => {
+const ButtonUI = ({ 
+    handlePress, 
+    title,
+    width, 
+    height, 
+    borderRadius, 
+    accessibilityLabel, 
+    children 
+  }: Props ) => {
   const { ui__buttom, ui__buttom__tittle } = styles
-  const { width, height, borderRadius, accessibilityLabel, children } = props
-
   return (
     <>
       <TouchableOpacity 
-        onPress={handlePress} 
+        onPress={handlePress}
         style={
           [ ui__buttom, 
             {
@@ -37,7 +43,7 @@ const ButtonUI = ({ handlePress, title, ...props }: Props) => {
           accessibilityRole="button"
           style={ui__buttom__tittle}
         >
-          {title || children} 
+          { children || title } 
         </Text>
       </TouchableOpacity>
     </>
