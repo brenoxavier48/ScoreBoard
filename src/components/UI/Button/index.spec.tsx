@@ -5,11 +5,6 @@ import ButtonUI from './index'
 
 describe('Button Component tests', () => {
 
-
-  test('Should renders correctly', () => {
-    const button = create(<ButtonUI title="test-button" handlePress={() => {}} />)
-  })
-
   test('Should has correctly accessibility label', async () => {
     const LABEL = 'test-button'
     const { getByA11yLabel } = render(<ButtonUI title="tittle" accessibilityLabel={LABEL} handlePress={() => {}} />)
@@ -20,10 +15,11 @@ describe('Button Component tests', () => {
     expect(buttonv2.props.accessibilityLabel).toBe(LABEL)
   })
 
-  // test('Should calls haandlePress correctly', async () => {
-  //   const LABEL = 'test-button'
-  //   const { getByA11yLabel } = render(<ButtonUI title="tittle" handlePress={() => {}} />)
-  //   const button = getByA11yLabel('test-button')
-  //   expect(button.props.accessibilityLabel).toBe(LABEL)
-  // })
+  test('Should calls haandlePress correctly', async () => {
+    const mockFunction = jest.fn()
+    const { getByA11yLabel } = render(<ButtonUI title="test-button" handlePress={mockFunction} />)
+    const button = getByA11yLabel('test-button')
+    fireEvent.press(button)
+    expect(mockFunction).toBeCalled()
+  })
 })
