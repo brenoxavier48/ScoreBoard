@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -13,12 +13,23 @@ import InputUI from '../components/UI/Input'
 
 const App = (props: any) => {
 
+  const [inputvalue1, setInputValue1] = useState('')
+  const [inputvalue2, setInputValue2] = useState('')
+
+  const handleChangeText1 = (text: string) => {
+    setInputValue1(text)
+  }
+
+  const handleChangeText2 = (text: string) => {
+    setInputValue2(text)
+  }
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.scrollView}>
-        <Text style={styles.body}> Hello world </Text>
-        <InputUI></InputUI>
+        <InputUI label="title"  keyboardAppearance="dark" value={inputvalue1} handleChangeText={handleChangeText1}></InputUI>
+        <InputUI label="title" value={inputvalue2} handleChangeText={handleChangeText2}></InputUI>
       </SafeAreaView>
     </>
   );
