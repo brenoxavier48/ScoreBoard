@@ -12,7 +12,7 @@ type Props = TextInputProps & {
 }
 
 const InputUI = (props: Props ) => {
-  const { value, label, handleChangeText } = props
+  const { value, label, handleChangeText, width } = props
   const { ui__input, ui__inputLabel, ui__container } = styles
 
   const [ isFocused, setIsFocused] = useState<Boolean>(false)
@@ -37,23 +37,31 @@ const InputUI = (props: Props ) => {
   const handleBlur = () => setIsFocused(false)
 
   const labelStyleDetails = {
-    color: _animatedIsFocused.interpolate({
+    opacity: _animatedIsFocused.interpolate({
       inputRange: [0, 1],
-      outputRange: ['#c36b1c', '#f58d2f']
+      outputRange: [0.36, 1]
     }),
     top: _animatedIsFocused.interpolate({
       inputRange: [0, 1],
-      outputRange: [18, 0]
+      outputRange: [17, 0]
     }),
     fontSize: _animatedIsFocused.interpolate({
       inputRange: [0, 1],
-      outputRange: [20, 14]
+      outputRange: [22, 14]
     })
   }
 
   return (
-    <View style={ui__container}>
-      <Animated.Text style={[ ui__inputLabel, labelStyleDetails ]}>
+    <View style={[
+      ui__container,
+      { width: width || "70%" }]}
+    >
+      <Animated.Text 
+        style={[ 
+          ui__inputLabel, 
+          labelStyleDetails
+        ]}
+      >
         {label}
       </Animated.Text>
       <TextInput
