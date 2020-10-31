@@ -7,7 +7,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
-import InputUI from '../components/UI/Input'
+import ScoreCard from '../components/ScoreCard'
 
 
 
@@ -28,8 +28,7 @@ const App = (props: any) => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.scrollView}>
-        <InputUI label="title"  keyboardAppearance="dark" value={inputvalue1} handleChangeText={handleChangeText1}></InputUI>
-        <InputUI label="title" value={inputvalue2} handleChangeText={handleChangeText2}></InputUI>
+        <ScoreCard></ScoreCard>
       </SafeAreaView>
     </>
   );
