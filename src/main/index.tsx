@@ -28,7 +28,13 @@ const App = (props: any) => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.scrollView}>
-        <ScoreCard></ScoreCard>
+        <ScoreCard
+          scoreTittle="title"
+          pointsPerRound={3}
+          handleDelete={()=>{}}
+          handleEdit={()=>{}}
+          handlePress={()=>{}}
+        ></ScoreCard>
       </SafeAreaView>
     </>
   );

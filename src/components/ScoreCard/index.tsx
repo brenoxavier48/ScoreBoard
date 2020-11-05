@@ -10,14 +10,27 @@ type Props = TouchableOpacityProps & {
   handleDelete(): void,
   handleEdit(): void,
   handlePress(): void
-
 }
 
-const ScoreCard = () => {
+const ScoreCard = (props: Props) => {
+  const { container, container__data, container__action } = styles
   return (
-    <TouchableOpacity>
-      
-    </TouchableOpacity>
+    <View style={container}>
+      <TouchableOpacity style={container__data}>
+        <Text>Title: {props.scoreTittle}</Text>
+        <Text>points: {props.scoreTittle}</Text>
+      </TouchableOpacity>
+      <View style={container__action}>
+        <TouchableOpacity>
+          <Text>
+            X
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Text> C </Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   )
 }
 
