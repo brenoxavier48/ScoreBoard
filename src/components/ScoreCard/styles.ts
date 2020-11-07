@@ -2,27 +2,41 @@ import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    height: 180,
-    width: "50%",
+    height: 160,
+    width: "60%",
+    margin: 5,
     
   },
 
   container__data: {
-    height: "60%",
-    position: "absolute",
-    top: 0,
+    height: "100%",
     width: "100%",
-    backgroundColor: "black",
-    color: "white",
+    backgroundColor: "#fb7700",
+    zIndex: 2,
     borderRadius: 4,
-    borderBottomStartRadius: 70,
-    borderBottomEndRadius: 70
+    borderBottomStartRadius: 160,
+    borderTopEndRadius: 160,
+    overflow: "hidden",
+    justifyContent: "center",
+    alignItems: "center"
   },
 
   container__action: {
+    backgroundColor: "black",
     position: "absolute",
     bottom: 0,
-    height: "50%",
-    flexDirection: "row"
-  }
+    height: "100%",
+    width: "100%",
+    flexDirection: "row",
+  },
+
+  container__action__delete: {
+    width: "50%",
+    borderRadius: 4,
+  },
+
+  container__action__edit: {
+    width: "50%",
+    borderRadius: 4,
+  },
 })

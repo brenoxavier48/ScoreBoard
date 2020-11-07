@@ -8,6 +8,9 @@ import {
   StatusBar,
 } from 'react-native';
 import ScoreCard from '../components/ScoreCard'
+import ButtonUI from '../components/UI/Button'
+import Input from '../components/UI/Input'
+
 
 
 
@@ -29,12 +32,31 @@ const App = (props: any) => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.scrollView}>
         <ScoreCard
-          scoreTittle="title"
-          pointsPerRound={3}
-          handleDelete={()=>{}}
-          handleEdit={()=>{}}
-          handlePress={()=>{}}
+          scoreTittle="Title"
+          pointsPerRound={5}
+          handleDelete={() => {}}
+          handleEdit={() => {}}
+          handlePress={() => {}}
         ></ScoreCard>
+        <ButtonUI
+          handlePress={() => {}}
+          title="New Template"
+        ></ButtonUI>
+        <ButtonUI
+          handlePress={() => {}}
+          title="+"
+          width="8%"
+          height={34}
+          borderRadius={50}
+        ></ButtonUI>
+        <Input handleChangeText={() => {}}
+          label="E-mail"
+          value={""}
+        ></Input>
+        <Input handleChangeText={() => {}}
+          label="Duda"
+          value={""}
+        ></Input>
       </SafeAreaView>
     </>
   );
