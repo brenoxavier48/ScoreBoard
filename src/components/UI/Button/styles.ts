@@ -8,11 +8,11 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     height: 42,
-    backgroundColor: "orange",
+    backgroundColor: "#fb7700",
     borderRadius: 4
   },
 
   ui__buttom__tittle: {
-    fontSize: 18
+    fontSize: 18,
   }
 })

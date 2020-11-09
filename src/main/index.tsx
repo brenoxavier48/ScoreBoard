@@ -32,8 +32,7 @@ const App = (props: any) => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={styles.scrollView}>
         <ScoreCard
-          scoreTittle="Title"
-          pointsPerRound={5}
+          scoreTittle="futebol game"
           handleDelete={() => {}}
           handleEdit={() => {}}
           handlePress={() => {}}

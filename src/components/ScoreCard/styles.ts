@@ -5,24 +5,29 @@ export const styles = StyleSheet.create({
     height: 160,
     width: "60%",
     margin: 5,
+    alignItems: "center"
     
   },
 
   container__data: {
     height: "100%",
-    width: "100%",
+    width: "70%",
     backgroundColor: "#fb7700",
     zIndex: 2,
-    borderRadius: 4,
-    borderBottomStartRadius: 160,
-    borderTopEndRadius: 160,
+    borderRadius: 0,
+    borderBottomStartRadius: 110,
+    borderTopEndRadius: 110,
     overflow: "hidden",
     justifyContent: "center",
     alignItems: "center"
   },
 
+  container__data__tittle: {
+    fontSize: 32,
+    fontWeight: "bold"
+  },
+
   container__action: {
-    backgroundColor: "black",
     position: "absolute",
     bottom: 0,
     height: "100%",
@@ -31,12 +36,24 @@ export const styles = StyleSheet.create({
   },
 
   container__action__delete: {
+    backgroundColor: "black",
     width: "50%",
-    borderRadius: 4,
+    borderRadius: 12,
+    borderBottomEndRadius: 120,
+    
   },
 
   container__action__edit: {
+    backgroundColor: "black",
     width: "50%",
-    borderRadius: 4,
+    borderRadius: 12,
+    borderTopStartRadius: 120
   },
+
+  container__action__text: {
+    color: "#fb7700",
+    position: "absolute"
+  }
+
+  
 })
