@@ -12,7 +12,7 @@ type Props = TouchableOpacityProps & {
 }
 
 const ScoreCard = (props: Props) => {
-  const { scoreTittle } = props
+  const { scoreTittle, handlePress, handleDelete, handleEdit } = props
   const { 
     container, 
     container__data,
@@ -26,19 +26,44 @@ const ScoreCard = (props: Props) => {
       <TouchableOpacity 
         style={container__data}
         activeOpacity={0.8}
+        onPress={handlePress}
       >
-        <Text style={container__data__tittle}>
+        <Text 
+          accessibilityLabel={scoreTittle}
+          accessibilityRole="button"
+          style={container__data__tittle}
+        >
           {scoreTittle}
         </Text>
       </TouchableOpacity>
       <View style={container__action}>
-        <TouchableOpacity style={container__action__edit}>
-          <Text style={[container__action__text, {bottom: 0, left: 0}]}>
+        <TouchableOpacity 
+          style={container__action__edit}
+          onPress={handleEdit}
+        >
+          <Text 
+            accessibilityLabel="edit"
+            accessibilityRole="button"
+            style={[
+              container__action__text, 
+              {bottom: 0, left: 0}
+            ]}
+          >
             C
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={container__action__delete}>
-          <Text style={[container__action__text, {top: 0, right: 0}]}>
+        <TouchableOpacity 
+          style={container__action__delete}
+          onPress={handleDelete}
+        >
+          <Text 
+            accessibilityLabel="delete"
+            accessibilityRole="button"
+            style={[
+              container__action__text, 
+              {top: 0, right: 0}
+            ]}
+          >
              X 
           </Text>
         </TouchableOpacity>
