@@ -8,6 +8,7 @@ import {
   StatusBar,
 } from 'react-native';
 import ScoreCard from '../components/ScoreCard'
+import ScoreCardFlatList from '../components/ScoreCardFlatList'
 import ButtonUI from '../components/UI/Button'
 import Input from '../components/UI/Input'
 
@@ -56,6 +57,43 @@ const App = (props: any) => {
           label="Duda"
           value={""}
         ></Input>
+        <ScoreCardFlatList data={[{
+          id: 1,
+          scoreTittle: "Teste",
+          handleDelete: () => {},
+          handleEdit: () => {},
+          handlePress: () => {},
+        },{
+          id: 2,
+          scoreTittle: "Teste",
+          handleDelete: () => {},
+          handleEdit: () => {},
+          handlePress: () => {},
+        },{
+          id: 3,
+          scoreTittle: "Teste",
+          handleDelete: () => {},
+          handleEdit: () => {},
+          handlePress: () => {},
+        },{
+          id: 4,
+          scoreTittle: "Teste",
+          handleDelete: () => {},
+          handleEdit: () => {},
+          handlePress: () => {},
+        },{
+          id: 5,
+          scoreTittle: "Teste",
+          handleDelete: () => {},
+          handleEdit: () => {},
+          handlePress: () => {},
+        },{
+          id: 6,
+          scoreTittle: "Teste",
+          handleDelete: () => {},
+          handleEdit: () => {},
+          handlePress: () => {},
+        },]}></ScoreCardFlatList>
       </SafeAreaView>
     </>
   );

@@ -3,10 +3,9 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     height: 160,
-    width: "60%",
+    width: 260,
     margin: 5,
     alignItems: "center"
-    
   },
 
   container__data: {
@@ -54,6 +53,4 @@ export const styles = StyleSheet.create({
     color: "#fb7700",
     position: "absolute"
   }
-
-  
 })

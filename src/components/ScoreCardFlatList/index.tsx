@@ -44,6 +44,7 @@ const ScoreCardFlatList = (props: Props) => {
       <FlatList
         data={data}
         renderItem={renderScoreCardItem}
+        keyExtractor={item => String(item.id)}
         horizontal
       />
     </SafeAreaView>
