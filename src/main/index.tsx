@@ -102,7 +102,8 @@ const App = (props: any) => {
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: 'rgb(25, 25, 26)',
-    flex: 1
+    flex: 1,
+    fontFamily: ''
   },
   engine: {
     position: 'absolute',

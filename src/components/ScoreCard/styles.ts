@@ -3,14 +3,14 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     height: 160,
-    width: 260,
+    width: 270,
     margin: 5,
     alignItems: "center"
   },
 
   container__data: {
     height: "100%",
-    width: "70%",
+    width: "65%",
     backgroundColor: "#fb7700",
     zIndex: 2,
     borderRadius: 0,
@@ -38,7 +38,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "black",
     width: "50%",
     borderRadius: 12,
-    borderBottomEndRadius: 120,
+    borderBottomEndRadius: 160,
     
   },
 
@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "black",
     width: "50%",
     borderRadius: 12,
-    borderTopStartRadius: 120
+    borderTopStartRadius: 160
   },
 
   container__action__text: {
