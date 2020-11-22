@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
-  View, TouchableOpacity, TouchableOpacityProps, Text, TextInput, Animated, TextInputProps
+  View, TouchableOpacity, TouchableOpacityProps, Text
 } from 'react-native';
 import { styles } from './styles'
 

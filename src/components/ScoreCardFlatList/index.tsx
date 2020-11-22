@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   FlatList, SafeAreaView
 } from 'react-native';
-import { styles } from './styles'
 import ScoreCard from '../ScoreCard'
-import { fireEvent } from '@testing-library/react-native';
 
 interface ScoreCardProps {
   id: number,
@@ -37,7 +35,6 @@ type Props = {
 
 const ScoreCardFlatList = (props: Props) => {
   const { data } = props
-  const {  } = styles
 
   return (
       <FlatList
