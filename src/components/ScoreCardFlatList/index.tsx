@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  View, FlatList, FlatListProps, SafeAreaView
+  FlatList, SafeAreaView
 } from 'react-native';
 import { styles } from './styles'
 import ScoreCard from '../ScoreCard'
@@ -40,14 +40,13 @@ const ScoreCardFlatList = (props: Props) => {
   const {  } = styles
 
   return (
-    <SafeAreaView >
       <FlatList
         data={data}
         renderItem={renderScoreCardItem}
         keyExtractor={item => String(item.id)}
+        showsHorizontalScrollIndicator={false}
         horizontal
       />
-    </SafeAreaView>
   )
 }
 
