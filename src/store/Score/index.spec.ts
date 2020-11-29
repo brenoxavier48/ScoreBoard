@@ -1,5 +1,5 @@
 import scoreReducer from './score.reducer'
-import { addScore } from './score.actions'
+import { addScore, removeScore } from './score.actions'
 import { ScoreModel } from '../../domain/models/scoreModel'
 
 describe('Score Reducer tests', () => {
@@ -28,6 +28,15 @@ describe('Score Reducer tests', () => {
     const initialState = makeState()
     const expectedState = [...initialState, additonalScore]
     const returnedSate = scoreReducer(initialState, addScore(additonalScore))
+
+    expect(returnedSate).toEqual(expectedState)
+  })
+
+  test('Score Reducer should remove a score correctly', () => {
+    const ID_TO_REMOVE = 1
+    const initialState = makeState()
+    const expectedState = initialState.filter(score => score.id !== ID_TO_REMOVE)
+    const returnedSate = scoreReducer(initialState, removeScore(ID_TO_REMOVE))
 
     expect(returnedSate).toEqual(expectedState)
   })

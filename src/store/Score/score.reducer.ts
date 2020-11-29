@@ -27,6 +27,9 @@ export default (state = inicialScoreModel, action: ActionStore): Array<ScoreMode
   switch (action.type) {
     case 'ADD_SCORE':
       return [...state, action.payload]
+
+    case 'REMOVE_SCORE':
+      return state.filter(score => score.id !== action.payload)
       
     default:
       return state
