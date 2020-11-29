@@ -18,16 +18,6 @@ const Home = () => {
       text__container__content, 
       score__container, 
       logo_container } = styles
-  const [inputvalue1, setInputValue1] = useState('')
-  const [inputvalue2, setInputValue2] = useState('')
-
-  const handleChangeText1 = (text: string) => {
-    setInputValue1(text)
-  }
-
-  const handleChangeText2 = (text: string) => {
-    setInputValue2(text)
-  }
 
   return (
     <SafeAreaView style={scrollView}>
@@ -42,43 +32,7 @@ const Home = () => {
         </Text>
       </View>
       <View style={score__container}>
-        <ScoreCardFlatList data={[{
-          id: 1,
-          scoreTittle: "Teste",
-          handleDelete: () => {},
-          handleEdit: () => {},
-          handlePress: () => {},
-        },{
-          id: 2,
-          scoreTittle: "Teste",
-          handleDelete: () => {},
-          handleEdit: () => {},
-          handlePress: () => {},
-        },{
-          id: 3,
-          scoreTittle: "Teste",
-          handleDelete: () => {},
-          handleEdit: () => {},
-          handlePress: () => {},
-        },{
-          id: 4,
-          scoreTittle: "Teste",
-          handleDelete: () => {},
-          handleEdit: () => {},
-          handlePress: () => {},
-        },{
-          id: 5,
-          scoreTittle: "Teste",
-          handleDelete: () => {},
-          handleEdit: () => {},
-          handlePress: () => {},
-        },{
-          id: 6,
-          scoreTittle: "Teste",
-          handleDelete: () => {},
-          handleEdit: () => {},
-          handlePress: () => {},
-        },]}></ScoreCardFlatList>
+        <ScoreCardFlatList></ScoreCardFlatList>
         <ButtonUI
           handlePress={() => {}}
           title="New Template"
