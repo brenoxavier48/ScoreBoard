@@ -21,6 +21,7 @@ const ScoreCard = (props: Props) => {
     container__action__delete, 
     container__action__edit,
     container__action__text } = styles
+    
   return (
     <View style={container}>
       <TouchableOpacity 

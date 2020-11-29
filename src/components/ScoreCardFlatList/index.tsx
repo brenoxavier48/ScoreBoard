@@ -1,7 +1,7 @@
 import React from 'react';
-import {
-  FlatList, SafeAreaView
-} from 'react-native';
+import { useSelector, useDispatch } from 'react-redux'
+import { selectAllScores } from '../../store/Score/score.selectors'
+import { FlatList } from 'react-native';
 import ScoreCard from '../ScoreCard'
 
 interface ScoreCardProps {
@@ -34,7 +34,15 @@ type Props = {
 }
 
 const ScoreCardFlatList = (props: Props) => {
-  const { data } = props
+  const dataInfo = useSelector(selectAllScores)
+
+  const data = dataInfo.map(score => ({
+    id: score.id,
+    scoreTittle: score.tittle,
+    handleDelete: () => {},
+    handleEdit: () => {},
+    handlePress: () => {}
+  }))
 
   return (
       <FlatList
