@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList } from 'react-native';
 
 import { useSelector, useDispatch } from 'react-redux'
+import { removeScore } from '../../store/Score/score.actions'
 import { selectAllScores } from '../../store/Score/score.selectors'
 
 import { ScoreModel } from '../../domain/models/scoreModel'
@@ -33,14 +34,15 @@ const renderScoreCardItem = ({ item }: PropsRenderItem) => (
 )
 
 const ScoreCardFlatList = () => {
+  const dispatch = useDispatch()
   const scores = useSelector(selectAllScores)
 
   const data = scores.map((score: ScoreModel) => ({
     id: score.id,
     scoreTittle: score.tittle,
-    handleDelete: () => {},
+    handlePress: () => {},
     handleEdit: () => {},
-    handlePress: () => {}
+    handleDelete: () => dispatch(removeScore(score.id))
   }))
 
   return (

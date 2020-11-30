@@ -2,7 +2,7 @@ import { combineReducers, createStore } from 'redux'
 import {  } from 'react-redux'
 import scoreReducer from './Score/score.reducer'
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
   score: scoreReducer
 })
 
