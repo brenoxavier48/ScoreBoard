@@ -5,14 +5,13 @@ import {
 import { styles } from './styles'
 
 type Props = TextInputProps & {
-  handleChangeText(text: String): void,
   label: string,
   value: string,
   width?: string,
 }
 
 const InputUI = (props: Props ) => {
-  const { value, label, handleChangeText, width } = props
+  const { value, label, width } = props
   const { ui__input, ui__inputLabel, ui__container } = styles
 
   const [ isFocused, setIsFocused] = useState<Boolean>(false)
@@ -67,7 +66,6 @@ const InputUI = (props: Props ) => {
       <TextInput
         style={ui__input}
         accessibilityLabel={label}
-        onChangeText={handleChangeText}
         onFocus={handleFocused}
         onBlur={handleBlur}
         {...props}
