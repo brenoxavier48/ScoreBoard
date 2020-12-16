@@ -8,6 +8,7 @@ import {
 import { ScoreModel } from '../../domain/models/scoreModel'
 import InputUI from '../../components/UI/Input'
 import ButtonUI from '../../components/UI/Button'
+import SwitchUI from '../../components/UI/Switch'
 import { addScore } from '../../store/Score/score.actions'
 import { selectOneScore } from '../../store/Score/score.selectors'
 import { styles } from './styles'
@@ -22,12 +23,12 @@ const CreateScore = (props: Props) => {
   const { scrollView } = styles
   
   const score: ScoreModel = typeof idScore === 'number' 
-  ? useSelector(selectOneScore(idScore)) 
-  : null
+    ? useSelector(selectOneScore(idScore)) 
+    : null
   
   const [ tittle, setTittle ] = useState<string>(score ? score.tittle : '')
   const [ pointToWinValue, setPointToWinValue ] = useState<number>(score && score.pointsToWin ? score.pointsToWin : 0)
-  const [ freePoints, setFreePoints ] = useState<boolean>(score ? score.freePoints :false)
+  const [ freePoints, setFreePoints ] = useState<boolean>(score ? score.freePoints : false)
   const [ pointsPerBid, setPointsPerBid ] = useState<number[]>(score && score.pointsPerBid ? score.pointsPerBid : [])
   
   return (
@@ -37,6 +38,11 @@ const CreateScore = (props: Props) => {
         value={tittle}
         onChangeText={setTittle}
       ></InputUI>
+      <SwitchUI 
+        label="Free points per bid"
+        value={freePoints}
+        onValueChange={() => setFreePoints(!freePoints)}
+      ></SwitchUI>
     </SafeAreaView>
   )
 }

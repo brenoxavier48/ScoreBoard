@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
     height: 42,
     paddingTop: 18,
     margin: 7,
-    marginTop: 14
+    marginTop: 14,
+    marginBottom: 14
   },
   
   ui__input: {
@@ -13,7 +14,7 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#fb7700',
     height: 34,
-    color: '#f19541',
+    color: 'white',
     fontSize: 18
   },
 
